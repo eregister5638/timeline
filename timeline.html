@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">My Project</div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="/">About</a></li>
+         <li><a href="timeline.html">Timeline</a></li>
+       </div>
+     </ul>
+   </nav>
+
+    <style>
+     /* NAVBAR STYLING STARTS */
+.navbar {
+ display: flex;
+ align-items: center;
+ padding: 20px;
+ background-color: transparent;
+ color: #fff;
+}
+.nav-links a {
+text-decoration: none;
+color:black;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+ color:black;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+ color:black;
+
+}
+.menu li:hover {
+ background-color: #4c9e9e;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+ position: relative; 
+}
+.dropdown {
+ background-color: rgb(1, 139, 139);
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+.services:hover .dropdown {
+ display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:transparent;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
+   </style>
+
+<style>
+  nav ul{
+      list-style-type: none;
+      font-family: monospace;
+
+  }
+
+  .logo{
+          font-family: monospace;
+
+  }
+
+
+
+
+</style>
+
+
+
+
+  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+    <div class="cd-h-timeline__container container">
+      <div class="cd-h-timeline__dates">
+        <div class="cd-h-timeline__line">
+          <ol>
+            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">10000+ BCE</a></li>
+            <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">725-675 BCE</a></li>
+            <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">428-347 BCE</a></li>
+            <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">3rd-1st Century BCE</a></li>
+            <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">129-216 AD</a></li>
+            <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">1346 AD</a></li>
+            <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">1440 AD</a></li>
+            <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">1484 AD</a></li>
+            <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">1491 AD</a></li>
+            <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">1492 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1493 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1496 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1518 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1520 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1542 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1561 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1566 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1585 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1617 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1628 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1660 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1663 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1664 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1671 AD</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">1693 AD</a></li>
+         
+          
+          </ol>
+
+          <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+        </div> <!-- .cd-h-timeline__line -->
+      </div> <!-- .cd-h-timeline__dates -->
+        
+      <ul>
+        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
+        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+      </ul>
+    </div> <!-- .cd-h-timeline__container -->
+
+    <div class="cd-h-timeline__events">
+      <ol>
+        <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Shamanism</h2>
+            <em class="cd-h-timeline__event-date">10000+ BCE</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              One of the world’s oldest religions that dates back to the paleolithic era. Shamans operate as liaisons between the natural and supernatural world and have defined traditional medicine in Asia and South America with their use of herbal, natural remedies. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Homer’s Odyssey </h2>
+            <em class="cd-h-timeline__event-date">725-675 BCE</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Greek poem that gives insight into ancient Greek medicine with its references to medicine, characterizing the healer as what would be known today as an apothecary or surgeon.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Plato</h2>
+            <em class="cd-h-timeline__event-date">428-347 BCE</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+             Plato was a Greek philosopher and a strong proponent of using observation and rational thought to guide the pursuit of knowledge. His ideas laid the foundation for the Scientific Method and modern scientific inquiry. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Hellenistic Medical Schools </h2>
+            <em class="cd-h-timeline__event-date">3rd-1st Century BCE</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Several medical schools of thought emerged during this period, most notably the Hippocratic school. Guided by natural observation, members of these Hellenistic medical schools reasoned that disease was the consequence of invisible, unseen forces.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Galen</h2>
+            <em class="cd-h-timeline__event-date">129-216 AD</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Galen was a greek physician who is famous for his theory of  four bodily humors. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">The Black Death begins </h2>
+            <em class="cd-h-timeline__event-date">1346</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              The Black Death was one of the most devastating pandemics in history, having a profound impact on the development and practice of medicine in Europe. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">The Invention of the Printing Press</h2>
+            <em class="cd-h-timeline__event-date">1440 AD</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Johannes Gutenberg revolutionized the printing industry with his invention of the printing press, a tool that would be instrumental in the proliferation of knowledge for centuries to come. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Herbarius latinus [Dutch] Kruydboek</h2>
+            <em class="cd-h-timeline__event-date">1484</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              This book not only signals the growth of botany and hermalism in traditional medicine, but it also underscores the role that the printing press played in the dissemination of medical knowledge during this time.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Hortis Sanitatis</h2>
+            <em class="cd-h-timeline__event-date">1491</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Published by Jacob Meydenbach, this book highlights the use of plants in traditional medicine. This book also reflects the rise of botany and herbalism in this era.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Discovery of the New World</h2>
+            <em class="cd-h-timeline__event-date">1492</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Christopher Columbus’s discovery of the New World denoted a new era of exploration and discovery, both of which had profound impacts on the development of science and medicine.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Secreta mulierum et virorum</h2>
+            <em class="cd-h-timeline__event-date">1493</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Another book that reflects the reflects how the printing press fueled the dissemination of natural, medical remedies. 
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Practica dicta Lilium medicine</h2>
+            <em class="cd-h-timeline__event-date">1496</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              This book was one of 15th century’s most influential medical texts. It captures the success of the printing press in the proliferation of information and medical knowledge, particularly in using natural or alternative remedies to treat medicine. 
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Establishment of the Royal College of Physicians in London</h2>
+            <em class="cd-h-timeline__event-date">1518</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              The Royal College of Physicians was established by a Royal Charter and regulated the study, instruction, and practice of physicians in England. 
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Smallpox arrives to the New World </h2>
+            <em class="cd-h-timeline__event-date">1520</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Smallpox was brought by the Spanish to the New World on their ships. This disease devastated the continent, as indigenous people had never experienced smallpox, measles, or the flu before.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">De Naturali Parte Medicinae</h2>
+            <em class="cd-h-timeline__event-date">1542</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              In this work published by Jean Fernel, a prominent physician during the Renaissance, he coins the term physiology, a field of natural study that continues to shape the way that medicine is understood today.
+            </p>
+          </div>
+        </li>
+
+         <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">A most excellent and perfecte homish apothecarye</h2>
+            <em class="cd-h-timeline__event-date">1561</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              This book is a translation of one of the works of Hieronymus Brunschwig, a German physician, botanist, and alchemist. This book is significant because it showed how the printing press made medical knowledge more accessible through translation. People who were unable to read German now had Brunschwig’s insights available to them. 
+            </p>
+          </div>
+        </li>
+
+         <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Vivae imagines partium corporis humani aereis formis expressae</h2>
+            <em class="cd-h-timeline__event-date">1566</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              This book highlights the anatomical revolution that Andreas Vesalius spearheaded.  
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Invention of the Compound Microscope </h2>
+            <em class="cd-h-timeline__event-date">1585</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Zacharias Jensen’s invention would push the bounds of scientific inquiry forever, laying the foundation for Robert Hooke to discover microscopic organisms in the mid 17th century. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">The Worshipful Guild of Apothecaries is established</h2>
+            <em class="cd-h-timeline__event-date">1617</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              The Apothecaries Guild is important because they regulate the study, instruction, and practice of apothecaries in England. This group was established by a royal charter from King James I. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Discovery of blood circulation</h2>
+            <em class="cd-h-timeline__event-date">1628</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              William Harvey was a physician and anatomist who used empirical observation and experimentation to broaden the field of medicine with his discovery of blood circulation. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Establishment of The Royal Society of London</h2>
+            <em class="cd-h-timeline__event-date">1660</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              The Royal Society of London was one of the first scientific societies, emphasizing the importance of scientific research, observation, and experimentation. 
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Heel-konstige aenmerckingen betreffende de gebreekken der vrouwen</h2>
+            <em class="cd-h-timeline__event-date">1663</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              This book reflects the incorporation of experimentation and observation into medicine.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Experimental philosophy</h2>
+            <em class="cd-h-timeline__event-date">1664</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              This book highlights the incorporation of experimentation and observation into medicine, a technique that would lead Robert Hooke to discover the existence of microscopic organisms in the following year. 
+            </p>
+          </div>
+        </li>
+
+         <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Les Secrets de la Medecine des Chinois</h2>
+            <em class="cd-h-timeline__event-date">1671</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+             This book is really interesting because it illustrates the role that the exchange of knowledge between the Western World and China. It highlights the differences and similarities between the medical systems in the two places, contributing to a more comprehensive, collective understanding of medicine.  
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Salem Witch Trials</h2>
+            <em class="cd-h-timeline__event-date">1693</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+             19 people found guilty of practicing witchcraft are hanged.
+            </p>
+          </div>
+        </li>
+
+
+
+
+      </ol>
+    </div> <!-- .cd-h-timeline__events -->
+  </section>
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
